@@ -1,0 +1,184 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #fbf9ec;
+}
+
+.modalBg {
+    display: block;
+}
+
+.modalMain {
+    padding: 50px 0 0 0;
+    opacity: 1;
+    bottom: -52px;
+}
+
+.mainBox {
+    background-color: #ff8d3b;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #fff;
+    padding-left: 30px;
+}
+
+.gourmetWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    /* margin: 0 auto; */
+}
+
+.gourmetWrap p {
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+/*ルーレットボックス*/
+.rouletteBox {
+    margin-left: 25px;
+}
+
+.rouletteBox figure {
+    margin: 20px 0 0 80px;
+}
+
+/*
+戻るボタン　顔の部分
+*/
+
+.modalBtnClose {
+    position: absolute;
+    top: -35px;
+    left: 180px;
+}
+
+.modalBtnClose svg {
+    width: 70px;
+    height: 70px;
+}
+
+.btnStyle {
+    margin-left: 30px;
+    padding-bottom: auto;
+}
+
+.btnStyle {
+    /* display: block; */
+    width: 200px;
+    height: 35px;
+    margin: 0 105px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 35px;
+    text-decoration: none;
+    color: #ff8d3b;
+    border-radius: 35px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+/*
+share modal setting
+*/
+
+/* モーダルを開くボタン */
+.modalOpen {
+    margin-top: 30px;
+}
+
+/* モーダルと背景の指定 */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    /* background: rgba(255, 255, 255, 0.5); */
+    backdrop-filter: blur(5px);
+    padding: 40px 20px;
+    overflow: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    box-sizing: border-box;
+}
+
+/* モーダルの擬似要素の指定 */
+.modal:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    margin-left: -0.2em;
+}
+
+/* クラスが追加された時の指定 */
+.modal.is-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* モーダル内側の指定 */
+.modalContainer {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 350px;
+    height: 300px;
+    width: 90%;
+}
+
+/* モーダルのコンテンツ部分の指定 */
+.modalContent {
+    background-color: #fff;
+    border-radius: 20px 20px 15px 15px;
+}
+
+.modalHeader {
+    padding: 5px 15px 0 0;
+    border-radius: 20px 20px 0 0;
+    height: 35px;
+    background-color: #ffc700;
+}
+
+.jsModalClose {
+    display: block;
+    margin: 0 0 0 auto;
+    width: 25px;
+    height: 25px;
+}
+
+.jsModalClose svg {
+    width: 25px;
+    height: 25px;
+}
+
+.shareWrap {
+    height: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.shareBox a {
+    display: block;
+    width: 60px;
+    height: 60px;
+    line-height: 80px;
+    border-radius: 50%;
+    background-color: #ffc700;
+}
+
+.shareBox a svg {
+    width: 30px;
+    height: 30px;
+}

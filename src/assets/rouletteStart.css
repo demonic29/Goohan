@@ -1,0 +1,251 @@
+html {
+    /* height: 100vh; */
+    font-size: 62.5%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #ff8d3b;
+}
+/*
+Next btn set
+*/
+.modalBtn {
+    width: 150px;
+    height: 35px;
+    margin: 30px auto 0;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 35px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 25px;
+    background: #ffc700;
+    opacity: 1;
+}
+
+/*モーダル用*/
+.modalBg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: none;
+}
+
+/*
+モーダル幅
+*/
+
+.modalMain {
+    width: 100%;
+    height: 90vh;
+    position: fixed;
+    bottom: -680px;
+    left: 0;
+    z-index: 11;
+    opacity: 0;
+    padding: 50px 0 0 30px;
+    background: #ff8d3b;
+    border-radius: 20px 20px 0 0;
+}
+
+.modalMain h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+/*
+戻るボタン　顔の部分
+*/
+
+.modalBtnClose {
+    position: absolute;
+    top: -35px;
+    left: 180px;
+}
+
+.modalBtnClose svg {
+    width: 70px;
+    height: 70px;
+}
+
+.leftEye {
+    position: absolute;
+    top: -55px;
+    left: 90px;
+}
+
+.leftEye svg {
+    width: 80px;
+    height: 80px;
+}
+
+.rightEye {
+    position: absolute;
+    top: -55px;
+    left: 260px;
+}
+
+.rightEye svg {
+    width: 80px;
+    height: 80px;
+}
+
+/*追加ボックス*/
+.addBox {
+    margin: 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.addBox .addStyle {
+    width: 120px;
+    height: 25px;
+    margin: 10px 10px 0 0;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 25px;
+    background-color: #fff;
+}
+
+.addBox .addBtn a {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50px;
+    height: 25px;
+    margin: 10px 20px 0 0;
+    color: #000;
+    text-decoration: none;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 15px;
+    background-color: #fff;
+}
+
+/*ルーレットボックス*/
+.rouletteBox {
+    width: 320px;
+    height: 320px;
+    /* background-color: #000; */
+    /* margin-top: 100px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-left: 35px;
+}
+
+.imgStyle {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: 50px 50px; */
+}
+
+.imgStyle svg {
+    width: 320px;
+    height: 320px;
+}
+
+.row {
+    overflow: hidden;
+    position: absolute;
+    top: 68px;
+    right: 50px;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnWrap {
+    display: flex;
+    position: relative;
+}
+
+.stopBtn {
+    position: absolute;
+    z-index: -10;
+}
+
+.btnStyle a {
+    display: block;
+    width: 200px;
+    height: 35px;
+    margin: 0 80px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 35px;
+    text-decoration: none;
+    color: #ff8d3b;
+    border-radius: 35px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.btnStyle a:hover {
+    text-decoration: none;
+    color: #ff8d3b;
+}
+
+/*モーダル開く下から上*/
+
+@keyframes SlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(-1%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-80%);
+    }
+}
+
+/*モーダル閉じる上から下*/
+
+@keyframes SlideDown {
+    0% {
+        opacity: 1;
+        transform: translateY(-80%);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-1%);
+    }
+}
+
+.modalMain._slideUp {
+    animation: SlideUp 0.5s ease-in-out forwards;
+}
+
+.modalMain._slideDown {
+    animation: SlideDown 0.5s ease-in-out forwards;
+}
+
+.modalMain._slideNone {
+    opacity: 0;
+    animation: SlideDown 0.5s ease-in-out forwards;
+}
+
+.modalSet._slideAll {
+    opacity: 1;
+    animation: SlideUp 0.5s ease-in-out forwards;
+}
