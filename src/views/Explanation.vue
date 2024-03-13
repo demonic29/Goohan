@@ -44,7 +44,7 @@
         </div>
 
         <div class="modalBtn">
-            <a href="/team 3/rouletteStart.html" class="text-white  text-decoration-none">Next</a>
+            <a href="/team3/rouletteStart.html" class="text-white  text-decoration-none">Next</a>
         </div>
 
         
